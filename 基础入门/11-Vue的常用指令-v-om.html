@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<div id="app">
+		<p :style="{color:fontColor}">{{msg}}</p>
+		<button v-on:click="msg='今天好热呀！'">改变内容</button>
+		<button @click="changeContent()">改变内容1</button>
+		<button @click="changeConntentColor()">改变颜色</button>
+	</div>
+	<script src="js/vue.js"></script>
+    <script>
+    	new Vue({
+    		el:'#app',
+    		data:{
+    			msg:'今天的天气真好！',
+    			fontColor:'red'
+    		},
+    		methods:{
+    			changeConntent(){
+    				this.msg='测试改掉没有！'
+    			},
+
+    			changeConntentColor(){
+    				this.fontColor='green';
+    			}
+    		}
+    	});
+    </script>
+</body>
+</html>
